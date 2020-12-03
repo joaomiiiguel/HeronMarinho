@@ -1,8 +1,11 @@
 <html>
+
 <head>
   <meta charset="utf-8" />
   <title>Heron Marinho - Dilis</title>
-  <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@36e0f2c207923d7ee31bc836254bef01f71403f0/dist/aframe-master.min.js"></script> <!---->
+  <script
+    src="https://cdn.jsdelivr.net/gh/aframevr/aframe@36e0f2c207923d7ee31bc836254bef01f71403f0/dist/aframe-master.min.js"></script>
+  <!---->
   <script src="https://unpkg.com/aframe-event-set-component@5.x.x/dist/aframe-event-set-component.min.js"></script>
   <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
   <!--<script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>-->
@@ -34,7 +37,7 @@
 
 
   <script>
-    
+
 
     var CenaAtual = "cenaFrente|cenaEntrada";
 
@@ -141,13 +144,14 @@
 
 <body>
 
-  <a-scene vr-mode-ui="enabled: false" renderer="antialias: true" background="color: #ECECEC" device-orientation-permission-ui="
+  <a-scene vr-mode-ui="enabled: false" renderer="antialias: true" background="color: #ECECEC"
+    device-orientation-permission-ui="
     denyButtonText: Negar;
     allowButtonText: Permitir;
     cancelButtonText: Fechar;                                                 
     deviceMotionMessage: Este site imersivo requer acesso aos sensores de movimento do dispositivo.;
     httpsMessage: Acesse este site por HTTPS para entrar no modo VR e conceder acesso aos sensores do dispositivo.">
-   
+
     <a-assets>
       <img id="logo" src="assets\AustroFranca-Logo.png">
       <img id="marco" src="assets\seta.png" />
@@ -192,6 +196,24 @@
       <img id="zen_point" src="assets\points\zen_point.png" />
       <img id="campo_point" src="assets\points\campo_point.png" />
       <img id="pet_point" src="assets\points\pet_point.png" />
+
+
+      <img id="bt_Titulo1" src="assets\BtElevador\bt_Apartamentos.png"/>
+      <img id="bt_Ap3102" src="assets\BtElevador\bt_3102.png"/>
+      <img id="bt_Ap3103" src="assets\BtElevador\bt_3103.png"/>
+      <img id="bt_Ap3204" src="assets\BtElevador\bt_3204.png"/>
+      <img id="bt_Ap3301" src="assets\BtElevador\bt_3301.png"/>
+      
+      <img id="bt_Titulo2" src="assets\BtElevador\bt_AreaLazer.png"/>
+      <img id="bt_Academia" src="assets\BtElevador\bt_Academia.png"/>
+      <img id="bt_ApPiscina" src="assets\BtElevador\bt_ApPiscina.png"/>
+      <img id="bt_Campo" src="assets\BtElevador\bt_Campo.png"/>
+      <img id="bt_Kids" src="assets\BtElevador\bt_Kids.png"/>
+      <img id="bt_Pets" src="assets\BtElevador\bt_Pets.png"/>
+      <img id="bt_Gourmet" src="assets\BtElevador\bt_Gourmet.png"/>
+      <img id="bt_Piscina" src="assets\BtElevador\bt_Piscina.png"/>
+      <img id="bt_Parquinho" src="assets\BtElevador\bt_Parquinho.png"/>
+      <img id="bt_Festas" src="assets\BtElevador\bt_Festas.png"/>
     </a-assets>
 
 
@@ -208,7 +230,9 @@
         <option value="cenaFrente|cenaEntrada">Frente do Prédio</option>
         <option value="cenaEntrada|cenaHall|cenaFrente">Entrada do Prédio</option>
         <option value="cenaHall|cenaElevador|cenaEntrada">Hall de Entrada</option>
-        <option value="cenaElevador|cenaHall|cenaEstacionamento|cenaEstacionamentoP2|cenaEstacionamentoP3|cenaChurrasco|cenaPets|cenaKids|cenaCampo|cenaFestas|cenaAcademia|cenaExterno">Elevador</option>
+        <option
+          value="cenaElevador|cenaHall|cenaEstacionamento|cenaEstacionamentoP2|cenaEstacionamentoP3|cenaChurrasco|cenaPets|cenaKids|cenaCampo|cenaFestas|cenaAcademia|cenaExterno">
+          Elevador</option>
         <option value="cenaEstacionamento|cenaElevador|cenaEstacionamentoP2">Estacionamento</option>
         <option value="cenaAcademia|cenaElevador|cenaAcademia2">Academia</option>
         <option value="cenaChurrasco|cenaElevador|cenaPiscina|cenaExterno">Apoio da Piscina</option>
@@ -229,11 +253,12 @@
       <a-sky src="#CondFrente" radius="50" rotation="0 140 0"></a-sky>
 
       <!--Ponto para Entrar-->
-      <a-entity position="-3 1.4 -1.3" look-at="#cam" geometry="primitive: plane; width: 0.5; height: 0.5"
+      <a-entity position="-3 1 -1.3" look-at="#cam" geometry="primitive: plane; width: 0.5; height: 0.5"
         material="opacity:0" event-set__mouseenter="scale: 1.1 1.1 1; color:#c5c5c5"
         event-set__mouseleave="scale: 1 1 1; color:#fff" proxy-event="event: click; to: #cam; as: fade"
         onclick="mudarCena('cenaEntrada|cenaHall|cenaFrente')">
-        <a-image src="#Portaria_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02"></a-image>
+        <a-image src="#Portaria_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02">
+        </a-image>
       </a-entity>
 
     </a-entity>
@@ -244,12 +269,12 @@
       <a-sky src="#CondEntrada" radius="50" rotation="0 180 0"></a-sky>
 
       <!--Ponto para Entrar-->
-      <a-entity position="-3 1.4 0.6" look-at="#cam" geometry="primitive: plane; width: 0.5; height: 0.5"
+      <a-entity position="-3 1 0.6" look-at="#cam" geometry="primitive: plane; width: 0.5; height: 0.5"
         material="opacity:0" event-set__mouseenter="scale: 1.1 1.1 1; color:#c5c5c5"
         event-set__mouseleave="scale: 1 1 1; color:#fff" proxy-event="event: click; to: #cam; as: fade"
         onclick="mudarCena('cenaHall|cenaElevador|cenaEntrada')">
         <a-image src="#Hall_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02"></a-image>
-        
+
       </a-entity>
 
       <!--Ponto para Frente-->
@@ -257,40 +282,45 @@
         material="opacity:0" event-set__mouseenter="scale: 1.1 1.1 1; color:#c5c5c5"
         event-set__mouseleave="scale: 1 1 1; color:#fff" proxy-event="event: click; to: #cam; as: fade"
         onclick="mudarCena('cenaFrente|cenaEntrada')">
-        <a-image src="#Entrada_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02"></a-image>
-        
+        <a-image src="#Entrada_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02">
+        </a-image>
+
       </a-entity>
 
     </a-entity>
 
-    
+
     <!--Cena Hall de Entrada-->
     <a-entity class="cena" id="cenaHall|cenaElevador|cenaEntrada" visible="false">
       <a-sky src="#HallEntrada" radius="50" rotation="0 0 0"></a-sky>
       <a-entity>
         <!--Ponto para Elevador-->
-        <a-entity position="-3 1 2.2" look-at="#cam" geometry="primitive: plane; width: 0.5; height: 0.5"
+        <a-entity position="-2 1 1.3" look-at="#cam" geometry="primitive: plane; width: 0.5; height: 0.5"
           material="opacity:0" event-set__mouseenter="scale: 1.1 1.1 1; color:#c5c5c5"
           event-set__mouseleave="scale: 1 1 1; color:#fff" proxy-event="event: click; to: #cam; as: fade"
           onclick="mudarCena('cenaElevador|cenaHall|cenaEstacionamento|cenaEstacionamentoP2|cenaEstacionamentoP3|cenaChurrasco|cenaPets|cenaKids|cenaCampo|cenaFestas|cenaAcademia|cenaExterno')">
-          <a-image src="#Elevador_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02"></a-image>
-          
+          <a-image src="#Elevador_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02">
+          </a-image>
+
         </a-entity>
 
         <!--Ponto para Entrada-->
         <a-entity position="2 1 1.4" look-at="#cam" geometry="primitive: plane; width: 0.5; height: 0.5"
           material="opacity:0" event-set__mouseenter="scale: 1.1 1.1 1; color:#c5c5c5"
           event-set__mouseleave="scale: 1 1 1; color:#fff" proxy-event="event: click; to: #cam; as: fade"
-          onclick="mudarCena('cenaEntrada|cenaHall')">
-          <a-image src="#Portaria_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02"></a-image>
-          
+          onclick="mudarCena('cenaEntrada|cenaHall|cenaFrente')">
+          <a-image src="#Portaria_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02">
+          </a-image>
+
         </a-entity>
 
       </a-entity>
     </a-entity>
 
     <!--Cena Elevador-->
-    <a-entity class="cena" id="cenaElevador|cenaHall|cenaEstacionamento|cenaEstacionamentoP2|cenaEstacionamentoP3|cenaChurrasco|cenaPets|cenaKids|cenaCampo|cenaFestas|cenaAcademia|cenaExterno" visible="false">
+    <a-entity class="cena"
+      id="cenaElevador|cenaHall|cenaEstacionamento|cenaEstacionamentoP2|cenaEstacionamentoP3|cenaChurrasco|cenaPets|cenaKids|cenaCampo|cenaFestas|cenaAcademia|cenaExterno"
+      visible="false">
       <a-sky src="#Elevador" radius="30" rotation="0 50 0"></a-sky>
 
       <a-entity>
@@ -299,141 +329,117 @@
           material="opacity:0" event-set__mouseenter="scale: 1.1 1.1 1; color:#c5c5c5"
           event-set__mouseleave="scale: 1 1 1; color:#fff" proxy-event="event: click; to: #cam; as: fade"
           onclick="mudarCena('cenaHall|cenaElevador|cenaEntrada')">
-          <a-image src="#Hall_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02"></a-image>
+          <a-image src="#Hall_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02">
+          </a-image>
         </a-entity>
 
         <!-- Estacionamento-->
         <a-entity position="3 1.3 -0.5" look-at="#cam" geometry="primitive: plane; width: 0.5; height: 0.5"
-        material="opacity:0" event-set__mouseenter="scale: 1.1 1.1 1; color:#c5c5c5"
-        event-set__mouseleave="scale: 1 1 1; color:#fff" proxy-event="event: click; to: #cam; as: fade"
-        onclick="mudarCena('cenaEstacionamento|cenaElevador|cenaEstacionamentoP2')">
-        <a-image src="#Estacionamento_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02"></a-image>
+          material="opacity:0" event-set__mouseenter="scale: 1.1 1.1 1; color:#c5c5c5"
+          event-set__mouseleave="scale: 1 1 1; color:#fff" proxy-event="event: click; to: #cam; as: fade"
+          onclick="mudarCena('cenaEstacionamento|cenaElevador|cenaEstacionamentoP2')">
+          <a-image src="#Estacionamento_point" class="button" width="0.6" height="0.6" color="#FFF"
+            position="0 0.1 0.02"></a-image>
         </a-entity>
-        <!--UI NAV-->
-        <a-entity look-at="#cam" position="-1 2.2 3">
-          <!--Ponto para Apto 1801-->
 
+        <a-entity position="-0.5 2.2 3">
+            
+        <a-entity rotation="0 150 0">
           <!--Ponto para Aptos -->
-          <a-entity id="AptoText" position="0 -0.1 0" text="value: Apartamentos; align: center; width:3;"></a-entity>
+          <a-entity id="AptoText" position="0 -0.1 0">
+            <a-image src="#bt_Titulo1" width="0.6" height="0.2"></a-image>
+          </a-entity>
 
 
           <!--Lista de Aptos-->
-          <a-entity id="AptoText1" position="0 -0.375 -0.1" scale="0.5 0.5 0.2"
-            text="value: Apartamento 3102; align: center; width:4; zOffset:0.06"
-            onclick="mudarcenaElevadorApto('3102.html')" geometry="primitive: box; width:2; height:0.5; depth:0.1"
-            material="opacity:0" event-set__mouseenter="_event: mouseenter; text.color: #000"
-            event-set__mouseleave="_event: mouseleave; text.color: #fff"
-            event-set__click="_event: click; text.color: #B4B4B4"></a-entity>
-
-          <a-entity id="AptoText2" position="0 -0.63 -0.1" scale="0.5 0.5 0.2"
-            text="value: Apartamento 3103; align: center; width:4; zOffset:0.06"
-            onclick="mudarcenaElevadorApto('3103.html')" geometry="primitive: box; width:2; height:0.5; depth:0.1"
-            material="opacity:0" event-set__mouseenter="_event: mouseenter; text.color: #000"
-            event-set__mouseleave="_event: mouseleave; text.color: #fff"
-            event-set__click="_event: click; text.color: #B4B4B4"></a-entity>
-
-          <a-entity id="AptoText3" position="0 -0.88 -0.1" scale="0.5 0.5 0.2"
-            text="value: Apartamento 3204; align: center; width:4; zOffset:0.06"
-            onclick="mudarcenaElevadorApto('3204.html')" geometry="primitive: box; width:2; height:0.5; depth:0.1"
-            material="opacity:0" event-set__mouseenter="_event: mouseenter; text.color: #000"
-            event-set__mouseleave="_event: mouseleave; text.color: #fff"
-            event-set__click="_event: click; text.color: #B4B4B4"></a-entity>
-
-          <a-entity id="AptoText4" position="0 -1.13 -0.1" scale="0.5 0.5 0.2"
-            text="value: Apartamento 3301; align: center; width:4; zOffset:0.06"
-            onclick="mudarcenaElevadorApto('3301.html')" geometry="primitive: box; width:2; height:0.5; depth:0.1"
-            material="opacity:0" event-set__mouseenter="_event: mouseenter; text.color: #000"
-            event-set__mouseleave="_event: mouseleave; text.color: #fff"
-            event-set__click="_event: click; text.color: #B4B4B4"></a-entity>
-
-
+          <a-image position="0 -0.375 -0.1" scale="0.6 0.2 0.2" src="#bt_Ap3102" class="button"
+            event-set__click="_event: click; material.color: #B4B4B4"
+            event-set__mouseenter="_event: mouseenter; material.color:#B4B4B4"
+            event-set__mouseleave="_event: mouseleave; material.color:#FFF" onclick="mudarcenaElevadorApto('3102.html')">
+          </a-image>
+          
+          <a-image position="0 -0.63 -0.1" scale="0.6 0.2 0.2" src="#bt_Ap3103" class="button"
+            event-set__click="_event: click; material.color: #B4B4B4"
+            event-set__mouseenter="_event: mouseenter; material.color:#B4B4B4"
+            event-set__mouseleave="_event: mouseleave; material.color:#FFF" onclick="mudarcenaElevadorApto('3103.html')">
+          </a-image>
+          
+          <a-image position="0 -0.88 -0.1" scale="0.6 0.2 0.2" src="#bt_Ap3204" class="button"
+            event-set__click="_event: click; material.color: #B4B4B4"
+            event-set__mouseenter="_event: mouseenter; material.color:#B4B4B4"
+            event-set__mouseleave="_event: mouseleave; material.color:#FFF" onclick="mudarcenaElevadorApto('3204.html')">
+          </a-image>
+          
+          <a-image position="0 -1.13 -0.1" scale="0.6 0.2 0.2" src="#bt_Ap3301" class="button"
+            event-set__click="_event: click; material.color: #B4B4B4"
+            event-set__mouseenter="_event: mouseenter; material.color:#B4B4B4"
+            event-set__mouseleave="_event: mouseleave; material.color:#FFF" onclick="mudarcenaElevadorApto('3301.html')">
+          </a-image>
+        </a-entity>
+        
+        <a-entity rotation="0 140 0">
           <!--Ponto para Area de Lazer -->
-          <a-entity id="AptoText" position="1.2 -0.1 0" text="value: Area de Lazer; align: center; width:3"></a-entity>
+          <a-entity id="AptoText" position="1.2 -0.1 0">
+            <a-image src="#bt_Titulo2" width="0.6" height="0.2"></a-image>
+          </a-entity>
+
 
           <!--Lista de Lazer-->
-          <a-entity id="LazerText1" position="1.2 -0.375 -0.1" scale="0.5 0.5 1"
-            text="value: Academia; align: center; width:4; zOffset:0.06"
-            geometry="primitive: box; width:2; height:0.5; depth:0.1" material="opacity:0"
-            onclick="mudarcenaElevador('cenaAcademia|cenaElevador|cenaAcademia2')"
-            event-set__mouseenter="_event: mouseenter; text.color: #000"
-            event-set__mouseleave="_event: mouseleave; text.color: #fff"
-            event-set__click="_event: click; text.color: #B4B4B4"></a-entity>
-
-          <a-entity id="LazerText2" position="1.2 -0.63 -0.1" scale="0.5 0.5 1"
-            text="value: Apoio da Piscina; align: center; width:4; zOffset:0.06"
-            geometry="primitive: box; width:2; height:0.5; depth:0.1" material="opacity:0"
-            onclick="mudarcenaElevador('cenaChurrasco|cenaElevador|cenaPiscina|cenaExterno')"
-            event-set__mouseenter="_event: mouseenter; text.color: #000"
-            event-set__mouseleave="_event: mouseleave; text.color: #fff"
-            event-set__click="_event: click; text.color: #B4B4B4"></a-entity>
-
-          <a-entity id="LazerText3" position="1.2 -0.88 -0.1" scale="0.5 0.5 1"
-            text="value: Campo de Futebol; align: center; width:4; zOffset:0.06"
-            geometry="primitive: box; width:2; height:0.5; depth:0.1" material="opacity:0"
-            onclick="mudarCena('cenaCampo|cenaPets|cenaKids|cenaExterno|cenaElevador')"
-            event-set__mouseenter="_event: mouseenter; text.color: #000"
-            event-set__mouseleave="_event: mouseleave; text.color: #fff"
-            event-set__click="_event: click; text.color: #B4B4B4"></a-entity>
-
-          <a-entity id="LazerText4" position="1.2 -1.13 -0.1" scale="0.5 0.5 1"
-            text="value: Espaco Kids; align: center; width:4; zOffset:0.06"
-            geometry="primitive: box; width:2; height:0.5; depth:0.1" material="opacity:0"
-            onclick="mudarCena('cenaKids2|cenaKids|cenaElevador')"
-            event-set__mouseenter="_event: mouseenter; text.color: #000"
-            event-set__mouseleave="_event: mouseleave; text.color: #fff"
-            event-set__click="_event: click; text.color: #B4B4B4"></a-entity>
-
-          <a-entity id="LazerText5" position="1.2 -1.38 -0.1" scale="0.5 0.5 1"
-            text="value: Espaco Pets; align: center; width:4; zOffset:0.06"
-            geometry="primitive: box; width:2; height:0.5; depth:0.1" material="opacity:0"
-            onclick="mudarCena('cenaPets|cenaCampo|cenaKids|cenaElevador')"
-            event-set__mouseenter="_event: mouseenter; text.color: #000"
-            event-set__mouseleave="_event: mouseleave; text.color: #fff"
-            event-set__click="_event: click; text.color: #B4B4B4"></a-entity>
-
-          <a-entity id="LazerText6" position="1.2 -1.63 -0.1" scale="0.5 0.5 1"
-            text="value: Espaco Gourmet; align: center; width:4; zOffset:0.06"
-            geometry="primitive: box; width:2; height:0.5; depth:0.1" material="opacity:0"
-            onclick="mudarCena('cenaGourmet|cenaFestas|cenaFestas2|cenaElevador')" event-set__mouseenter="_event: mouseenter; text.color: #000"
-            event-set__mouseleave="_event: mouseleave; text.color: #fff"
-            event-set__click="_event: click; text.color: #B4B4B4"></a-entity>
-
-          <a-entity id="LazerText7" position="1.2 -1.88 -0.1" scale="0.5 0.5 1"
-            text="value: Piscina; align: center; width:4; zOffset:0.06"
-            geometry="primitive: box; width:2; height:0.5; depth:0.1" material="opacity:0"
-            onclick="mudarCena('cenaPiscina|cenaChurrasco|cenaElevador|cenaPiscina2')" event-set__mouseenter="_event: mouseenter; text.color: #000"
-            event-set__mouseleave="_event: mouseleave; text.color: #fff"
-            event-set__click="_event: click; text.color: #B4B4B4"></a-entity>
-
-          <a-entity id="LazerText8" position="1.2 -2.13 -0.1" scale="0.5 0.5 1"
-            text="value: Sala de Festas; align: center; width:4; zOffset:0.06"
-            geometry="primitive: box; width:2; height:0.5; depth:0.1" material="opacity:0"
-            onclick="mudarCena('cenaFestas|cenaGourmet|cenaElevador|cenaFestas2')"
-            event-set__mouseenter="_event: mouseenter; text.color: #000"
-            event-set__mouseleave="_event: mouseleave; text.color: #fff"
-            event-set__click="_event: click; text.color: #B4B4B4"></a-entity>
-
-          <a-entity id="LazerText9" position="1.2 -2.38 -0.1" scale="0.5 0.5 1"
-            text="value: Parquinho; align: center; width:4; zOffset:0.06"
-            geometry="primitive: box; width:2; height:0.5; depth:0.1" material="opacity:0"
-            onclick="mudarCena('cenaKids|cenaKids2|cenaExterno|cenaPets|cenaElevador|cenaCampo')"
-            event-set__mouseenter="_event: mouseenter; text.color: #000"
-            event-set__mouseleave="_event: mouseleave; text.color: #fff"
-            event-set__click="_event: click; text.color: #B4B4B4"></a-entity>
-<!--
-          <a-entity id="LazerText10" position="1.2 -2.63 -0.1" scale="0.5 0.5 1"
-            text="value: Piscina; align: center; width:4; zOffset:0.06"
-            geometry="primitive: box; width:2; height:0.5; depth:0.1" material="opacity:0"
-            onclick="mudarcenaElevador('cenaPiscina|cenaChurrasco|cenaPiscinaGrande|cenaElevador')"
-            event-set__mouseenter="_event: mouseenter; text.color: #000"
-            event-set__mouseleave="_event: mouseleave; text.color: #fff"
-            event-set__click="_event: click; text.color: #B4B4B4"></a-entity>
-            -->
-
+          <a-image position="1.2 -0.375 -0.1" scale="0.6 0.2 0.2" src="#bt_Academia" class="button"
+            event-set__click="_event: click; material.color: #B4B4B4"
+            event-set__mouseenter="_event: mouseenter; material.color:#B4B4B4"
+            event-set__mouseleave="_event: mouseleave; material.color:#FFF" onclick="mudarcenaElevador('cenaAcademia|cenaElevador|cenaAcademia2')">
+          </a-image>
+          
+          <a-image position="1.2 -0.63 -0.1" scale="0.6 0.2 0.2" src="#bt_ApPiscina" class="button"
+            event-set__click="_event: click; material.color: #B4B4B4"
+            event-set__mouseenter="_event: mouseenter; material.color:#B4B4B4"
+            event-set__mouseleave="_event: mouseleave; material.color:#FFF" onclick="mudarcenaElevador('cenaChurrasco|cenaElevador|cenaPiscina|cenaExterno')">
+          </a-image>
+          
+          <a-image position="1.2 -0.88 -0.1" scale="0.6 0.2 0.2" src="#bt_Campo" class="button"
+            event-set__click="_event: click; material.color: #B4B4B4"
+            event-set__mouseenter="_event: mouseenter; material.color:#B4B4B4"
+            event-set__mouseleave="_event: mouseleave; material.color:#FFF" onclick="mudarCena('cenaCampo|cenaPets|cenaKids|cenaExterno|cenaElevador')">
+          </a-image>
+          
+          <a-image position="1.2 -1.13 -0.1" scale="0.6 0.2 0.2" src="#bt_Kids" class="button"
+            event-set__click="_event: click; material.color: #B4B4B4"
+            event-set__mouseenter="_event: mouseenter; material.color:#B4B4B4"
+            event-set__mouseleave="_event: mouseleave; material.color:#FFF" onclick="mudarCena('cenaKids2|cenaKids|cenaElevador')">
+          </a-image>
+          
+          <a-image position="1.2 -1.38 -0.1" scale="0.6 0.2 0.2" src="#bt_Pets" class="button"
+            event-set__click="_event: click; material.color: #B4B4B4"
+            event-set__mouseenter="_event: mouseenter; material.color:#B4B4B4"
+            event-set__mouseleave="_event: mouseleave; material.color:#FFF" onclick="mudarCena('cenaPets|cenaCampo|cenaKids|cenaElevador')">
+          </a-image>
+          
+          <a-image position="1.2 -1.63 -0.1" scale="0.6 0.2 0.2" src="#bt_Gourmet" class="button"
+            event-set__click="_event: click; material.color: #B4B4B4"
+            event-set__mouseenter="_event: mouseenter; material.color:#B4B4B4"
+            event-set__mouseleave="_event: mouseleave; material.color:#FFF" onclick="mudarCena('cenaGourmet|cenaFestas|cenaFestas2|cenaElevador')">
+          </a-image>
+          
+          <a-image position="1.2 -1.88 -0.1" scale="0.6 0.2 0.2" src="#bt_Piscina" class="button"
+            event-set__click="_event: click; material.color: #B4B4B4"
+            event-set__mouseenter="_event: mouseenter; material.color:#B4B4B4"
+            event-set__mouseleave="_event: mouseleave; material.color:#FFF" onclick="mudarCena('cenaPiscina|cenaChurrasco|cenaElevador|cenaPiscina2')">
+          </a-image>
+          
+          <a-image position="1.2 -2.13 -0.1" scale="0.6 0.2 0.2" src="#bt_Parquinho" class="button"
+            event-set__click="_event: click; material.color: #B4B4B4"
+            event-set__mouseenter="_event: mouseenter; material.color:#B4B4B4"
+            event-set__mouseleave="_event: mouseleave; material.color:#FFF" onclick="mudarCena('cenaKids|cenaKids2|cenaExterno|cenaPets|cenaElevador|cenaCampo')">
+          </a-image>
+          
+          <a-image position="1.2 -2.38 -0.1" scale="0.6 0.2 0.2" src="#bt_Festas" class="button"
+            event-set__click="_event: click; material.color: #B4B4B4"
+            event-set__mouseenter="_event: mouseenter; material.color:#B4B4B4"
+            event-set__mouseleave="_event: mouseleave; material.color:#FFF" onclick="mudarCena('cenaFestas|cenaGourmet|cenaElevador|cenaFestas2')">
+          </a-image>
         </a-entity>
-
-
-      
+        </a-entity>
 
       </a-entity>
     </a-entity>
@@ -447,8 +453,9 @@
           material="opacity:0" event-set__mouseenter="scale: 1.1 1.1 1; color:#c5c5c5"
           event-set__mouseleave="scale: 1 1 1; color:#fff" proxy-event="event: click; to: #cam; as: fade"
           onclick="mudarCena('cenaElevador|cenaHall|cenaEstacionamento|cenaEstacionamentoP2|cenaEstacionamentoP3|cenaChurrasco|cenaPets|cenaKids|cenaCampo|cenaFestas|cenaAcademia|cenaExterno')">
-          <a-image src="#Elevador_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02"></a-image>
-          
+          <a-image src="#Elevador_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02">
+          </a-image>
+
         </a-entity>
 
         <!--Subterraneo-->
@@ -456,8 +463,9 @@
           material="opacity:0" event-set__mouseenter="scale: 1.1 1.1 1; color:#c5c5c5"
           event-set__mouseleave="scale: 1 1 1; color:#fff" proxy-event="event: click; to: #cam; as: fade"
           onclick="mudarCena('cenaEstacionamentoP2|cenaEstacionamento|cenaEstacionamentoP3|cenaElevador')">
-          <a-image src="#EstacionamentoP2_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02"></a-image>
-          
+          <a-image src="#EstacionamentoP2_point" class="button" width="0.4" height="0.4" color="#FFF"
+            position="0 0.1 0.02"></a-image>
+
         </a-entity>
 
 
@@ -466,7 +474,8 @@
 
 
     <!--Cena Estacionamento P2-->
-    <a-entity class="cena" id="cenaEstacionamentoP2|cenaEstacionamento|cenaEstacionamentoP3|cenaElevador" visible="false">
+    <a-entity class="cena" id="cenaEstacionamentoP2|cenaEstacionamento|cenaEstacionamentoP3|cenaElevador"
+      visible="false">
       <a-sky src="#EstacionamentoP2" radius="30" rotation="0 -50 0"></a-sky>
       <a-entity>
         <!--Elevador-->
@@ -474,45 +483,50 @@
           material="opacity:0" event-set__mouseenter="scale: 1.1 1.1 1; color:#c5c5c5"
           event-set__mouseleave="scale: 1 1 1; color:#fff" proxy-event="event: click; to: #cam; as: fade"
           onclick="mudarCena('cenaElevador|cenaHall|cenaEstacionamento|cenaEstacionamentoP2|cenaEstacionamentoP3|cenaChurrasco|cenaPets|cenaKids|cenaCampo|cenaFestas|cenaAcademia|cenaExterno')">
-          <a-image src="#Elevador_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02"></a-image>
+          <a-image src="#Elevador_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02">
+          </a-image>
         </a-entity>
 
-      <!--P1-->
-      <a-entity position="2 1 -1" look-at="#cam" geometry="primitive: plane; width: 0.5; height: 0.5"
+        <!--P1-->
+        <a-entity position="2 1 -1" look-at="#cam" geometry="primitive: plane; width: 0.5; height: 0.5"
           material="opacity:0" event-set__mouseenter="scale: 1.1 1.1 1; color:#c5c5c5"
           event-set__mouseleave="scale: 1 1 1; color:#fff" proxy-event="event: click; to: #cam; as: fade"
           onclick="mudarCena('cenaEstacionamento|cenaElevador|cenaEstacionamentoP2')">
-          <a-image src="#Estacionamento_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02"></a-image>
-      </a-entity>
+          <a-image src="#Estacionamento_point" class="button" width="0.4" height="0.4" color="#FFF"
+            position="0 0.1 0.02"></a-image>
+        </a-entity>
 
-      <!--p3-->
-      <a-entity position="1 1 -2" look-at="#cam" geometry="primitive: plane; width: 0.5; height: 0.5"
-        material="opacity:0" event-set__mouseenter="scale: 1.1 1.1 1; color:#c5c5c5"
-        event-set__mouseleave="scale: 1 1 1; color:#fff" proxy-event="event: click; to: #cam; as: fade"
-        onclick="mudarCena('cenaEstacionamentoP3|cenaEstacionamentoP2|cenaElevador')">
-        <a-image src="#EstacionamentoP3_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02"></a-image>
-      </a-entity>
+        <!--p3-->
+        <a-entity position="1 1 -2" look-at="#cam" geometry="primitive: plane; width: 0.5; height: 0.5"
+          material="opacity:0" event-set__mouseenter="scale: 1.1 1.1 1; color:#c5c5c5"
+          event-set__mouseleave="scale: 1 1 1; color:#fff" proxy-event="event: click; to: #cam; as: fade"
+          onclick="mudarCena('cenaEstacionamentoP3|cenaEstacionamentoP2|cenaElevador')">
+          <a-image src="#EstacionamentoP3_point" class="button" width="0.4" height="0.4" color="#FFF"
+            position="0 0.1 0.02"></a-image>
+        </a-entity>
       </a-entity>
     </a-entity>
 
-     <!--Cena Estacionamento P3-->
-     <a-entity class="cena" id="cenaEstacionamentoP3|cenaEstacionamentoP2|cenaElevador" visible="false">
+    <!--Cena Estacionamento P3-->
+    <a-entity class="cena" id="cenaEstacionamentoP3|cenaEstacionamentoP2|cenaElevador" visible="false">
       <a-sky src="#EstacionamentoP3" radius="30" rotation="0 -10 0"></a-sky>
       <a-entity>
         <!--Elevador-->
-        <a-entity position="-2 1 -2" look-at="#cam" geometry="primitive: plane; width: 0.5; height: 0.5"
+        <a-entity position="-1.4 1 -2" look-at="#cam" geometry="primitive: plane; width: 0.5; height: 0.5"
           material="opacity:0" event-set__mouseenter="scale: 1.1 1.1 1; color:#c5c5c5"
           event-set__mouseleave="scale: 1 1 1; color:#fff" proxy-event="event: click; to: #cam; as: fade"
           onclick="mudarCena('cenaElevador|cenaHall|cenaEstacionamento|cenaEstacionamentoP2|cenaEstacionamentoP3|cenaChurrasco|cenaPets|cenaKids|cenaCampo|cenaFestas|cenaAcademia|cenaExterno')">
-          <a-image src="#Elevador_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02"></a-image>
+          <a-image src="#Elevador_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02">
+          </a-image>
         </a-entity>
 
         <!--Elevador-->
-        <a-entity position="-2.5 0.6 -0.6" look-at="#cam" geometry="primitive: plane; width: 0.5; height: 0.5"
+        <a-entity position="-2 1 0" look-at="#cam" geometry="primitive: plane; width: 0.5; height: 0.5"
           material="opacity:0" event-set__mouseenter="scale: 1.1 1.1 1; color:#c5c5c5"
           event-set__mouseleave="scale: 1 1 1; color:#fff" proxy-event="event: click; to: #cam; as: fade"
           onclick="mudarCena('cenaEstacionamentoP2|cenaEstacionamento|cenaEstacionamentoP3|cenaElevador')">
-          <a-image src="#EstacionamentoP2_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02"></a-image>
+          <a-image src="#EstacionamentoP2_point" class="button" width="0.4" height="0.4" color="#FFF"
+            position="0 0.1 0.02"></a-image>
         </a-entity>
       </a-entity>
     </a-entity>
@@ -525,11 +539,12 @@
         material="opacity:0" event-set__mouseenter="scale: 1.1 1.1 1; color:#c5c5c5"
         event-set__mouseleave="scale: 1 1 1; color:#fff" proxy-event="event: click; to: #cam; as: fade"
         onclick="mudarCena('cenaCampo|cenaPets|cenaKids|cenaExterno|cenaElevador')">
-        <a-image src="#campo_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02"></a-image>
+        <a-image src="#campo_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02">
+        </a-image>
       </a-entity>
 
       <!--Ponto para Kids-->
-      <a-entity position="-1.5 1.5 0.8" look-at="#cam" geometry="primitive: plane; width: 0.5; height: 0.5"
+      <a-entity position="-2 1.5 1" look-at="#cam" geometry="primitive: plane; width: 0.5; height: 0.5"
         material="opacity:0" event-set__mouseenter="scale: 1.1 1.1 1; color:#c5c5c5"
         event-set__mouseleave="scale: 1 1 1; color:#fff" proxy-event="event: click; to: #cam; as: fade"
         onclick="mudarCena('cenaKids|cenaKids2|cenaExterno|cenaPets|cenaElevador|cenaCampo')">
@@ -546,7 +561,8 @@
         material="opacity:0" event-set__mouseenter="scale: 1.1 1.1 1; color:#c5c5c5"
         event-set__mouseleave="scale: 1 1 1; color:#fff" proxy-event="event: click; to: #cam; as: fade"
         onclick="mudarCena('cenaExterno|cenaChurrasco|cenaKids|cenaElevador|cenaCampo')">
-        <a-image src="#externo_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02"></a-image>
+        <a-image src="#externo_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02">
+        </a-image>
       </a-entity>
 
       <!--Ponto para Elevador-->
@@ -570,22 +586,24 @@
     <!--Cena Churrasco-->
     <a-entity class="cena" id="cenaChurrasco|cenaElevador|cenaPiscina|cenaExterno" visible="false">
 
-      <a-sky id="sky" src="#Churrasco" radius="50" rotation="0 120 0" cursor-listener></a-sky>
+      <a-sky id="sky" src="#Churrasco" radius="50" rotation="0 97 0" cursor-listener></a-sky>
 
       <!--Ponto para Elevador-->
-      <a-entity position="-1.5 1.5 2.5" look-at="#cam" geometry="primitive: plane; width: 0.5; height: 0.5"
+      <a-entity position="-1.8 1.5 0.6" look-at="#cam" geometry="primitive: plane; width: 0.5; height: 0.5"
         material="opacity:0" event-set__mouseenter="scale: 1.1 1.1 1; color:#c5c5c5"
         event-set__mouseleave="scale: 1 1 1; color:#fff" proxy-event="event: click; to: #cam; as: fade"
         onclick="mudarCena('cenaExterno|cenaChurrasco|cenaKids|cenaElevador|cenaCampo')">
-        <a-image src="#externo_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02"></a-image>
+        <a-image src="#externo_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02">
+        </a-image>
       </a-entity>
 
       <!--Ponto para Piscina-->
-      <a-entity position="2.7 0.6 1.3" look-at="#cam" geometry="primitive: plane; width: 0.5; height: 0.5"
+      <a-entity position="2 0.6 2" look-at="#cam" geometry="primitive: plane; width: 0.5; height: 0.5"
         material="opacity:0" event-set__mouseenter="scale: 1.1 1.1 1; color:#c5c5c5"
         event-set__mouseleave="scale: 1 1 1; color:#fff" proxy-event="event: click; to: #cam; as: fade"
         onclick="mudarCena('cenaPiscina|cenaChurrasco|cenaElevador|cenaPiscina2')">
-        <a-image src="#piscina_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02"></a-image>
+        <a-image src="#piscina_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02">
+        </a-image>
       </a-entity>
 
     </a-entity>
@@ -599,8 +617,9 @@
         material="opacity:0" event-set__mouseenter="scale: 1.1 1.1 1; color:#c5c5c5"
         event-set__mouseleave="scale: 1 1 1; color:#fff" proxy-event="event: click; to: #cam; as: fade"
         onclick="mudarCena('cenaChurrasco|cenaElevador|cenaPiscina|cenaExterno')">
-        <a-image src="#churrasqueira_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02"></a-image>
-        
+        <a-image src="#churrasqueira_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02">
+        </a-image>
+
       </a-entity>
 
       <!--Ponto para Piscina-->
@@ -608,7 +627,8 @@
         material="opacity:0" event-set__mouseenter="scale: 1.1 1.1 1; color:#c5c5c5"
         event-set__mouseleave="scale: 1 1 1; color:#fff" proxy-event="event: click; to: #cam; as: fade"
         onclick="mudarCena('cenaPiscina2|cenaPiscina')">
-        <a-image src="#piscina_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02"></a-image>  
+        <a-image src="#piscina_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02">
+        </a-image>
       </a-entity>
 
     </a-entity>
@@ -622,8 +642,9 @@
         material="opacity:0" event-set__mouseenter="scale: 1.1 1.1 1; color:#c5c5c5"
         event-set__mouseleave="scale: 1 1 1; color:#fff" proxy-event="event: click; to: #cam; as: fade"
         onclick="mudarCena('cenaPiscina|cenaChurrasco|cenaElevador|cenaPiscina2')">
-        <a-image src="#piscina_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02"></a-image>
-        
+        <a-image src="#piscina_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02">
+        </a-image>
+
       </a-entity>
 
     </a-entity>
@@ -633,15 +654,16 @@
       <a-sky src="#Externa" radius="50" rotation="0 0 0"></a-sky>
 
       <!--Ponto para Churrasqueira-->
-      <a-entity position="-2 1.3 1" look-at="#cam" geometry="primitive: plane; width: 0.5; height: 0.5"
+      <a-entity position="-2 1.3 1.5" look-at="#cam" geometry="primitive: plane; width: 0.5; height: 0.5"
         material="opacity:0" event-set__mouseenter="scale: 1.1 1.1 1; color:#c5c5c5"
         event-set__mouseleave="scale: 1 1 1; color:#fff" proxy-event="event: click; to: #cam; as: fade"
         onclick="mudarCena('cenaChurrasco|cenaElevador|cenaPiscina|cenaExterno')">
-        <a-image src="#churrasqueira_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02"></a-image>
+        <a-image src="#churrasqueira_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02">
+        </a-image>
       </a-entity>
 
       <!--Ponto para Churrasqueira-->
-      <a-entity position="-1.5 1.3 -3" look-at="#cam" geometry="primitive: plane; width: 0.5; height: 0.5"
+      <a-entity position="-1.5 1.3 -2" look-at="#cam" geometry="primitive: plane; width: 0.5; height: 0.5"
         material="opacity:0" event-set__mouseenter="scale: 1.1 1.1 1; color:#c5c5c5"
         event-set__mouseleave="scale: 1 1 1; color:#fff" proxy-event="event: click; to: #cam; as: fade"
         onclick="mudarCena('cenaKids|cenaKids2|cenaExterno|cenaPets|cenaElevador|cenaCampo')">
@@ -653,7 +675,8 @@
         material="opacity:0" event-set__mouseenter="scale: 1.1 1.1 1; color:#c5c5c5"
         event-set__mouseleave="scale: 1 1 1; color:#fff" proxy-event="event: click; to: #cam; as: fade"
         onclick="mudarCena('cenaElevador|cenaHall|cenaEstacionamento|cenaEstacionamentoP2|cenaEstacionamentoP3|cenaChurrasco|cenaPets|cenaKids|cenaCampo|cenaFestas|cenaAcademia|cenaExterno')">
-        <a-image src="#Elevador_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02"></a-image>
+        <a-image src="#Elevador_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02">
+        </a-image>
       </a-entity>
 
     </a-entity>
@@ -668,7 +691,7 @@
         event-set__mouseleave="scale: 1 1 1; color:#fff" proxy-event="event: click; to: #cam; as: fade"
         onclick="mudarCena('cenaPets|cenaCampo|cenaKids|cenaElevador')">
         <a-image src="#pet_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02"></a-image>
-        
+
       </a-entity>
 
       <!--Ponto para Elevador-->
@@ -676,8 +699,9 @@
         material="opacity:0" event-set__mouseenter="scale: 1.1 1.1 1; color:#c5c5c5"
         event-set__mouseleave="scale: 1 1 1; color:#fff" proxy-event="event: click; to: #cam; as: fade"
         onclick="mudarCena('cenaKids2|cenaKids|cenaElevador')">
-        <a-image src="#kids2_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02"></a-image>
-        
+        <a-image src="#kids2_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02">
+        </a-image>
+
       </a-entity>
 
       <!--Ponto para Elevador-->
@@ -685,22 +709,23 @@
         material="opacity:0" event-set__mouseenter="scale: 1.1 1.1 1; color:#c5c5c5"
         event-set__mouseleave="scale: 1 1 1; color:#fff" proxy-event="event: click; to: #cam; as: fade"
         onclick="mudarCena('cenaExterno|cenaChurrasco|cenaKids|cenaElevador|cenaCampo')">
-        <a-image src="#externo_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02"></a-image>
-        
+        <a-image src="#externo_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02">
+        </a-image>
+
       </a-entity>
     </a-entity>
 
     <!--Cena kids-->
     <a-entity class="cena" id="cenaKids2|cenaKids|cenaElevador" visible="false">
-      <a-sky src="#Kids2" radius="50" rotation="0 -50 0"></a-sky>
+      <a-sky src="#Kids2" radius="50" rotation="0 -55 0"></a-sky>
 
       <!--Ponto para Elevador-->
-      <a-entity position="0.6 1 3" look-at="#cam" geometry="primitive: plane; width: 0.5; height: 0.5"
+      <a-entity position="0 1 2" look-at="#cam" geometry="primitive: plane; width: 0.5; height: 0.5"
         material="opacity:0" event-set__mouseenter="scale: 1.1 1.1 1; color:#c5c5c5"
         event-set__mouseleave="scale: 1 1 1; color:#fff" proxy-event="event: click; to: #cam; as: fade"
         onclick="mudarCena('cenaKids|cenaKids2|cenaExterno|cenaPets|cenaElevador|cenaCampo')">
         <a-image src="#kids_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02"></a-image>
-        
+
       </a-entity>
 
     </a-entity>
@@ -714,8 +739,9 @@
         material="opacity:0" event-set__mouseenter="scale: 1.1 1.1 1; color:#c5c5c5"
         event-set__mouseleave="scale: 1 1 1; color:#fff" proxy-event="event: click; to: #cam; as: fade"
         onclick="mudarCena('cenaElevador|cenaHall|cenaEstacionamento|cenaEstacionamentoP2|cenaEstacionamentoP3|cenaChurrasco|cenaPets|cenaKids|cenaCampo|cenaFestas|cenaAcademia|cenaExterno')">
-        <a-image src="#Elevador_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02"></a-image>
-        
+        <a-image src="#Elevador_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02">
+        </a-image>
+
       </a-entity>
 
       <!--Ponto para Elevador-->
@@ -723,7 +749,8 @@
         material="opacity:0" event-set__mouseenter="scale: 1.1 1.1 1; color:#c5c5c5"
         event-set__mouseleave="scale: 1 1 1; color:#fff" proxy-event="event: click; to: #cam; as: fade"
         onclick="mudarCena('cenaAcademia2|cenaAcademia')">
-        <a-image src="#ambiente2_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02"></a-image>
+        <a-image src="#ambiente2_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02">
+        </a-image>
       </a-entity>
 
     </a-entity>
@@ -737,7 +764,8 @@
         material="opacity:0" event-set__mouseenter="scale: 1.1 1.1 1; color:#c5c5c5"
         event-set__mouseleave="scale: 1 1 1; color:#fff" proxy-event="event: click; to: #cam; as: fade"
         onclick="mudarCena('cenaAcademia|cenaElevador|cenaAcademia2')">
-        <a-image src="#ambiente1_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02"></a-image>
+        <a-image src="#ambiente1_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02">
+        </a-image>
       </a-entity>
 
 
@@ -751,69 +779,45 @@
       <a-entity position="-3 1 0" look-at="#cam" geometry="primitive: plane; width: 0.5; height: 0.5"
         material="opacity:0" event-set__mouseenter="scale: 1.1 1.1 1; color:#c5c5c5"
         event-set__mouseleave="scale: 1 1 1; color:#fff" proxy-event="event: click; to: #cam; as: fade"
-        onclick="mudarCena('cenaFestas2|cenaGourmet|cenaFestas')">
-        <a-image src="#festas_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02"></a-image>
-        
+        onclick="mudarCena('cenaFestas|cenaGourmet|cenaElevador|cenaFestas2')">
+        <a-image src="#festas_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02">
+        </a-image>
+
       </a-entity>
 
 
     </a-entity>
 
     <!--Cena Festas-->
-    <a-entity class="cena" id="cenaFestas|cenaGourmet|cenaElevador|cenaFestas2" visible="false">      <a-sky src="#Festa1" radius="50" rotation="0 160 0"></a-sky>
+    <a-entity class="cena" id="cenaFestas|cenaGourmet|cenaElevador|cenaFestas2" visible="false">
+      <a-sky src="#Festa2" radius="50" rotation="0 0 0"></a-sky>
 
-      <!--Ponto para Gourmet
-      <a-entity position="1 1 3" look-at="#cam" geometry="primitive: plane; width: 0.5; height: 0.5"
-        material="opacity:0" event-set__mouseenter="scale: 1.1 1.1 1; color:#c5c5c5"
-        event-set__mouseleave="scale: 1 1 1; color:#fff" proxy-event="event: click; to: #cam; as: fade"
-        onclick="mudarCena('cenaGourmet|cenaFestas|cenaFestas2|cenaElevador')">
-        <a-image src="#gourmet_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02"></a-image>
-        
-      </a-entity>-->
+
 
       <!--Ponto para Elevador-->
-      <a-entity position="3 1.4 0.5" look-at="#cam" geometry="primitive: plane; width: 0.5; height: 0.5"
+      <a-entity position="-1.5 1 -1.4" look-at="#cam" geometry="primitive: plane; width: 0.5; height: 0.5"
         material="opacity:0" event-set__mouseenter="scale: 1.1 1.1 1; color:#c5c5c5"
         event-set__mouseleave="scale: 1 1 1; color:#fff" proxy-event="event: click; to: #cam; as: fade"
         onclick="mudarCena('cenaElevador|cenaHall|cenaEstacionamento|cenaEstacionamentoP2|cenaEstacionamentoP3|cenaChurrasco|cenaPets|cenaKids|cenaCampo|cenaFestas|cenaAcademia|cenaExterno')">
-        <a-image src="#Elevador_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02"></a-image>
-        
+        <a-image src="#Elevador_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02">
+        </a-image>
+
       </a-entity>
-
-      <!--Ponto para Festas 2-->
-      <a-entity position="1 0.5 2" look-at="#cam" geometry="primitive: plane; width: 0.5; height: 0.5"
-        material="opacity:0" event-set__mouseenter="scale: 1.1 1.1 1; color:#c5c5c5"
-        event-set__mouseleave="scale: 1 1 1; color:#fff" proxy-event="event: click; to: #cam; as: fade"
-        onclick="mudarCena('cenaFestas2|cenaGourmet|cenaFestas')">
-        <a-image src="#ambiente2_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02"></a-image>
-      </a-entity>
-
-    </a-entity>
-
-    <!--Cena Festas 2-->
-    <a-entity class="cena" id="cenaFestas2|cenaGourmet|cenaFestas" visible="false">
-      <a-sky src="#Festa2" radius="50" rotation="0 0 0"></a-sky>
 
       <!--Ponto para Gourmet-->
       <a-entity position="1.6 1.2 -3" look-at="#cam" geometry="primitive: plane; width: 0.5; height: 0.5"
         material="opacity:0" event-set__mouseenter="scale: 1.1 1.1 1; color:#c5c5c5"
         event-set__mouseleave="scale: 1 1 1; color:#fff" proxy-event="event: click; to: #cam; as: fade"
         onclick="mudarCena('cenaGourmet|cenaFestas|cenaFestas2|cenaElevador')">
-        <a-image src="#gourmet_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02"></a-image>
-        
-      </a-entity>
+        <a-image src="#gourmet_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02">
+        </a-image>
 
-
-      <!--Ponto para Gourmet-->
-      <a-entity position="-2.5 1 0.7" look-at="#cam" geometry="primitive: plane; width: 0.5; height: 0.5"
-        material="opacity:0" event-set__mouseenter="scale: 1.1 1.1 1; color:#c5c5c5"
-        event-set__mouseleave="scale: 1 1 1; color:#fff" proxy-event="event: click; to: #cam; as: fade"
-        onclick="mudarCena('cenaFestas|cenaGourmet|cenaElevador|cenaFestas2')">
-        <a-image src="#ambiente1_point" class="button" width="0.4" height="0.4" color="#FFF" position="0 0.1 0.02"></a-image>
       </a-entity>
 
 
     </a-entity>
+
+
 
   </a-scene>
 
